@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "App.svelte",
+    "HMSSchedule.svelte",
+    "Schedule.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\r\n  import { time } from './stores/TimeStore.js';\r\n  import { hhsSched, hmsSched } from './stores/ScheduleStore.js';\r\n  import Schedule from './components/Schedule.svelte';\r\n  import HmsSchedule from './components/HMSSchedule.svelte';\r\n\r\n  const formatter = new Intl.DateTimeFormat('en', {\r\n    hour12: true,\r\n    hour: 'numeric',\r\n    minute: '2-digit',\r\n    second: '2-digit',\r\n  });\r\n\r\n  const isABDay = () => {\r\n    return;\r\n  };\r\n</script>\r\n\r\n<style>\r\n  .lh {\r\n    line-height: 0.2rem !important;\r\n  }\r\n\r\n  .mh36 {\r\n    min-height: 40px !important;\r\n  }\r\n</style>\r\n\r\n<main>\r\n  <nav class=\"nav-extended blue darken-4\">\r\n    <div class=\"nav-wrapper mh36\">\r\n      <a href=\"#!\" class=\"brand-logo center\">Hopkins Public Schools</a>\r\n    </div>\r\n    <div class=\"nav-content center lh\">\r\n      <span class=\"nav-title\">{formatter.format($time)}</span>\r\n    </div>\r\n  </nav>\r\n\r\n  <div class=\"\">\r\n    <div class=\"row mb-0\">\r\n      {#if $hhsSched.length > 0}\r\n        <div class=\"col s12\">\r\n          <Schedule sched={$hhsSched[0].periods} title={$hhsSched[0].title} />\r\n          <Schedule sched={$hhsSched[1].periods} title={$hhsSched[1].title} />\r\n        </div>\r\n      {/if}\r\n    </div>\r\n    <div class=\"row\">\r\n      {#if $hmsSched.length > 0}\r\n        <HmsSchedule title=\"6th Grade\" sched={$hmsSched[0].periods} />\r\n        <HmsSchedule title=\"7th Grade\" sched={$hmsSched[1].periods} />\r\n        <HmsSchedule title=\"8th Grade\" sched={$hmsSched[2].periods} />\r\n      {/if}\r\n    </div>\r\n  </div>\r\n</main>\r\n",
+    "<script>\r\n</script>\r\n\r\n<style>\r\n  .overlay {\r\n    background: #ccc;\r\n    width: 20%;\r\n  }\r\n\r\n  .p-2 {\r\n    padding: 20px;\r\n  }\r\n</style>\r\n\r\n<ul class=\"collection with-header\">\r\n  <li class=\"collection-header\">\r\n    <h5>6th Grade</h5>\r\n  </li>\r\n\r\n  <li class=\"collection-item blue p-0\">\r\n    <div class=\"overlay\">\r\n      <div class=\"p-2\">\r\n        1\r\n        <a class=\"secondary-content\">7:45 AM - 8:43 AM</a>\r\n      </div>\r\n    </div>\r\n  </li>\r\n</ul>\r\n",
+    "<script>\r\n  import Period from './Period.svelte';\r\n  export let sched;\r\n  export let title;\r\n</script>\r\n\r\n<style>\r\n  .lh24 {\r\n    line-height: 24px !important;\r\n  }\r\n</style>\r\n\r\n<div class=\"card z-depth-0\">\r\n  <div class=\"card-content p-0\">\r\n    <span class=\"card-title lh24\">{title}</span>\r\n    <div class=\"row\">\r\n      {#each sched as period}\r\n        <div class=\"col s2\">\r\n          <Period info={period} />\r\n        </div>\r\n      {/each}\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+  ],
+  "names": [],
+  "mappings": "AAmBE,GAAG,cAAC,CAAC,AACH,WAAW,CAAE,MAAM,CAAC,UAAU,AAChC,CAAC,AAED,KAAK,cAAC,CAAC,AACL,UAAU,CAAE,IAAI,CAAC,UAAU,AAC7B,CAAC;ACrBD,QAAQ,cAAC,CAAC,AACR,UAAU,CAAE,IAAI,CAChB,KAAK,CAAE,GAAG,AACZ,CAAC,AAED,IAAI,cAAC,CAAC,AACJ,OAAO,CAAE,IAAI,AACf,CAAC;ACJD,KAAK,cAAC,CAAC,AACL,WAAW,CAAE,IAAI,CAAC,UAAU,AAC9B,CAAC"
+}
