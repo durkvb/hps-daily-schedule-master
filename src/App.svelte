@@ -44,9 +44,10 @@
     </div>
     <div class="row">
       {#if $hmsSched.length > 0}
-        <HmsSchedule title="6th Grade" sched={$hmsSched[0].periods} />
-        <HmsSchedule title="7th Grade" sched={$hmsSched[1].periods} />
-        <HmsSchedule title="8th Grade" sched={$hmsSched[2].periods} />
+      <div class="col s12">
+        <HmsSchedule title="HMS A-Lunch" sched={$hmsSched[0].periods} />
+        <HmsSchedule title="HMS B-Lunch" sched={$hmsSched[1].periods} />
+      </div>
       {/if}
     </div>
   </div>
