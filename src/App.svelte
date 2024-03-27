@@ -44,10 +44,8 @@
     </div>
     <div class="row">
       {#if $hmsSched.length > 0}
-      <div class="col s12">
         <HmsSchedule title="HMS A-Lunch" sched={$hmsSched[0].periods} />
         <HmsSchedule title="HMS B-Lunch" sched={$hmsSched[1].periods} />
-      </div>
       {/if}
     </div>
   </div>
