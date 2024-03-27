@@ -1995,7 +1995,7 @@ var app = (function () {
     			attr_dev(div4, "class", "row");
     			add_location(div4, file, 46, 2, 1269);
     			attr_dev(div5, "class", "card");
-    			toggle_class(div5, "green", /*current*/ ctx[1] === true);
+    			toggle_class(div5, "blue", /*current*/ ctx[1] === true);
     			toggle_class(div5, "lighten-4", /*current*/ ctx[1] === true);
     			add_location(div5, file, 36, 0, 976);
     		},
@@ -2036,7 +2036,7 @@ var app = (function () {
     			if (dirty & /*info*/ 1 && t7_value !== (t7_value = get12HourStamp(/*info*/ ctx[0].end) + "")) set_data_dev(t7, t7_value);
 
     			if (dirty & /*current*/ 2) {
-    				toggle_class(div5, "green", /*current*/ ctx[1] === true);
+    				toggle_class(div5, "blue", /*current*/ ctx[1] === true);
     			}
 
     			if (dirty & /*current*/ 2) {
@@ -2441,7 +2441,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			span = element("span");
-    			attr_dev(span, "class", "badge green white-text");
+    			attr_dev(span, "class", "badge blue white-text");
     			attr_dev(span, "data-badge-caption", "passing");
     			add_location(span, file$2, 49, 10, 1278);
     		},
@@ -2496,7 +2496,7 @@ var app = (function () {
     			add_location(div0, file$2, 44, 4, 1114);
     			add_location(div1, file$2, 43, 2, 1103);
     			attr_dev(li, "class", "collection-item");
-    			toggle_class(li, "green", /*current*/ ctx[1] === true);
+    			toggle_class(li, "blue", /*current*/ ctx[1] === true);
     			toggle_class(li, "lighten-4", /*current*/ ctx[1] === true);
     			add_location(li, file$2, 39, 0, 997);
     		},
@@ -2532,7 +2532,7 @@ var app = (function () {
     			}
 
     			if (dirty & /*current*/ 2) {
-    				toggle_class(li, "green", /*current*/ ctx[1] === true);
+    				toggle_class(li, "blue", /*current*/ ctx[1] === true);
     			}
 
     			if (dirty & /*current*/ 2) {
@@ -3126,7 +3126,7 @@ var app = (function () {
     			add_location(span, file$4, 31, 6, 656);
     			attr_dev(div0, "class", "nav-wrapper");
     			add_location(div0, file$4, 30, 4, 623);
-    			attr_dev(nav, "class", "green darken-4");
+    			attr_dev(nav, "class", "blue darken-4");
     			add_location(nav, file$4, 29, 2, 590);
     			attr_dev(div1, "class", "row mb-0");
     			add_location(div1, file$4, 36, 4, 768);

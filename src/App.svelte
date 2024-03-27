@@ -27,7 +27,7 @@
 </style>
 
 <main>
-  <nav class="green darken-4">
+  <nav class="blue darken-4">
     <div class="nav-wrapper">
       <span class="brand-logo center">{formatter.format($time)}</span>
     </div>
